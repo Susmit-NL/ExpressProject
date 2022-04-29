@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var mysql = require("mysql2");
+var dotenv = require("dotenv");
+dotenv.config();
+exports.db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PWD,
+    database: process.env.DB_NAME
+});
